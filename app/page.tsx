@@ -7,7 +7,7 @@ import { projects } from "@/data/projects";
 export default function Home() {
   return (
     <>
-      {/* Hero */}
+      {/* hero */}
       <section className="flex flex-col items-center justify-center px-6 py-24 text-center sm:py-32">
         <p className="mb-4 text-sm font-medium uppercase tracking-widest text-zinc-500">
           Bonney Lake High School
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Achievements */}
+      {/* achievements */}
       <Section title="What We've Done">
         <div className="grid gap-4 sm:grid-cols-3">
           {[
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Competitions preview */}
+      {/* competitions */}
       <Section
         title="Competitions"
         subtitle="We compete in programming competitions across Washington state."
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Projects preview */}
+      {/* projects */}
       <Section
         title="Projects"
         subtitle="What we've been working on."
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* CTA */}
+      {/* join cta */}
       <section className="border-t border-zinc-800 px-6 py-20 text-center">
         <h2 className="text-2xl font-bold sm:text-3xl">Want to build with us?</h2>
         <p className="mx-auto mt-4 max-w-md text-zinc-400">

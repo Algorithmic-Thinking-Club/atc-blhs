@@ -16,7 +16,7 @@ export default function Navbar() {
           {siteConfig.name}
         </Link>
 
-        {/* Desktop */}
+        {/* desktop nav */}
         <div className="hidden gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -33,7 +33,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile toggle */}
+        {/* mobile toggle */}
         <button
           className="text-zinc-400 md:hidden"
           onClick={() => setOpen(!open)}
@@ -51,7 +51,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* mobile menu */}
       {open && (
         <div className="border-t border-zinc-800 px-6 pb-4 md:hidden">
           {navLinks.map((link) => (
