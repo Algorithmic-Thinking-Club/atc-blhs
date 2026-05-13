@@ -33,7 +33,7 @@ export default function Home() {
       <Section title="What We've Done">
         <div className="grid gap-4 sm:grid-cols-3">
           {[
-            { stat: "Gold", label: "SkillsUSA State" },
+            { stat: "WiseGraph", label: "Built for a BLHS Staff" },
             { stat: "Podium Sweep", label: "SkillsUSA Regionals" },
             { stat: "Nationals", label: "Qualified, Atlanta 2026" },
           ].map((item) => (
