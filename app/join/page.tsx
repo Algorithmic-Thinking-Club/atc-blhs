@@ -11,10 +11,18 @@ export const metadata: Metadata = {
 export default function JoinPage() {
   return (
     <>
-      <Section title="Join ATC" subtitle="No experience required.">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
-          <div className="max-w-2xl lg:flex-1">
-            <p className="text-zinc-400 leading-relaxed">
+      <div className="relative overflow-hidden rounded-xl mb-16">
+        <Image
+          src="/club-booth.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-25 pointer-events-none"
+        />
+        <div className="relative z-10 px-8 py-14 sm:px-12 sm:py-20">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Join ATC</h2>
+          <p className="mt-2 text-zinc-400">No experience required.</p>
+          <div className="mt-8 max-w-2xl">
+            <p className="text-zinc-300 leading-relaxed">
               ATC is the Algorithmic Thinking Club at Bonney Lake High School.
               We build software, compete in programming competitions, and work on
               projects together.
@@ -23,33 +31,27 @@ export default function JoinPage() {
               You don&apos;t need any coding experience to join. We&apos;ll help you
               get started. If you already know how to code, even better.
             </p>
-            <div className="mt-8">
-              <h3 className="text-lg font-semibold">Ready?</h3>
-              <p className="mt-2 text-sm text-zinc-400">
-                Fill out the form and show up to a meeting.
-              </p>
-              <div className="mt-4 flex gap-4">
-                <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>
-                  Sign Up
-                </Button>
-                <Button href="/" variant="secondary">
-                  Back to Home
-                </Button>
-              </div>
+          </div>
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold">Ready?</h3>
+            <p className="mt-2 text-sm text-zinc-400">
+              Fill out the form and show up to a meeting.
+            </p>
+            <div className="mt-4 flex gap-4">
+              <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>
+                Sign Up
+              </Button>
+              <Button href="/" variant="secondary">
+                Back to Home
+              </Button>
             </div>
           </div>
-          <div className="overflow-hidden rounded-lg lg:w-80 lg:shrink-0">
-            <Image
-              src="/club-booth.jpg"
-              alt="ATC booth at BLHS club fair"
-              width={590}
-              height={862}
-              className="w-full object-cover"
-            />
-          </div>
         </div>
+      </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <Section>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
               title: "Build Real Projects",
