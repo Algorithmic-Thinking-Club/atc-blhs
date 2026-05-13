@@ -99,7 +99,13 @@ export default function Home() {
                   {project.status}
                 </span>
               </div>
-              <h3 className="text-lg font-semibold">{project.title}</h3>
+              <h3 className="text-lg font-semibold">
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                    {project.title}
+                  </a>
+                ) : project.title}
+              </h3>
               <p className="mt-2 text-sm text-zinc-400">
                 {project.description}
               </p>

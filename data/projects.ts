@@ -3,6 +3,7 @@ export type Project = {
   status: "active" | "paused" | "planned";
   description: string;
   tech?: string[];
+  link?: string;
   image?: string;
 };
 
@@ -16,6 +17,7 @@ export const projects: Project[] = [
   },
   {
     title: "WiseGraph",
+    link: "https://wisegraph.vercel.app",
     status: "active",
     description:
       "A data visualization tool built for a BLHS student support specialist : David Wiseman. Tracks student progress across terms with 4 dashboard views, 3 chart types, and multi-term comparison. Used internally to support parent-facing discussions.",
