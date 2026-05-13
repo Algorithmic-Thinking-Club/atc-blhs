@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import { competitions } from "@/data/competitions";
@@ -13,6 +14,16 @@ export default function CompetitionsPage() {
       title="Competitions"
       subtitle="ATC members compete in programming competitions at the regional, state, and national level."
     >
+      <div className="mb-10 overflow-hidden rounded-lg">
+        <Image
+          src="/skillsusa-state.jpg"
+          alt="ATC members at SkillsUSA State 2026"
+          width={1120}
+          height={840}
+          className="w-full object-cover"
+        />
+      </div>
+
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {competitions.map((comp) => (
           <Card key={comp.title} className="flex flex-col">
