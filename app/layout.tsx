@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | ATC",
   },
   description:
-    "The computer science club at Bonney Lake High School.",
+    "The first computer science club at Bonney Lake High School.",
 };
 
 export default function RootLayout({
