@@ -115,17 +115,6 @@ export default function Home() {
           </Button>
         </div>
       </Section>
-
-      {/* join cta */}
-      <section className="border-t border-zinc-800 px-6 py-20 text-center">
-        <h2 className="text-2xl font-bold sm:text-3xl">Want to build with us?</h2>
-        <p className="mx-auto mt-4 max-w-md text-zinc-400">
-          ATC is open to all skill levels. No experience required.
-        </p>
-        <div className="mt-8">
-          <Button href="/join">Join ATC</Button>
-        </div>
-      </section>
     </>
   );
 }
