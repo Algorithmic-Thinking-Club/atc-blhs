@@ -15,10 +15,17 @@ export const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "Adventure Game",
-    status: "paused",
+    title: "WiseGraph",
+    status: "active",
     description:
-      "A text-based adventure game started earlier in the year. Currently paused, may be picked back up later.",
-    tech: ["Python"],
+      "A data-visualization tool built for a BLHS student support specialist : David Wiseman. Tracks student progress across terms with 4 dashboard views, 3 chart types, and multi-term comparison. Used internally to support parent-facing discussions.",
+    tech: ["TypeScript", "React", "Recharts"],
+  },
+  {
+    title: "Adventure Game",
+    status: "planned",
+    description:
+      "A collaborative BLHS school-life game. Ashwath builds the core framework over summer 2026, and ATC members build individual modules and minigames during the school year as plugins. Meant to be a fun onboarding project for new students and a long-term club effort.",
+    tech: ["TypeScript"],
   },
 ];
