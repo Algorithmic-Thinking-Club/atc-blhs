@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
+import Button from "@/components/Button";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
@@ -57,6 +58,13 @@ export default function ProjectsPage() {
             )}
           </Card>
         ))}
+      </div>
+
+      <div className="mt-10 flex items-center gap-4 rounded-lg border border-zinc-800 bg-zinc-900/50 p-5">
+        <p className="text-sm text-zinc-400">All our code is public.</p>
+        <Button href="https://github.com/Algorithmic-Thinking-Club" external variant="secondary">
+          GitHub
+        </Button>
       </div>
     </Section>
   );
