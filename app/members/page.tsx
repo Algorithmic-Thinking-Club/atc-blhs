@@ -23,7 +23,7 @@ export default function MembersPage() {
                 .join("")}
             </div>
             <h3 className="text-lg font-semibold">{member.name}</h3>
-            <p className="text-sm text-blue-400">{member.role}</p>
+            <p className="text-sm text-accent">{member.role}</p>
             {member.bio && (
               <p className="mt-3 text-sm leading-relaxed text-zinc-400">
                 {member.bio}

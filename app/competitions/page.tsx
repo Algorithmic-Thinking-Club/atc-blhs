@@ -19,7 +19,7 @@ export default function CompetitionsPage() {
             {comp.image && (
               <div className="mb-4 aspect-video rounded bg-zinc-800" />
             )}
-            <p className="text-xs font-medium uppercase tracking-wider text-blue-400">
+            <p className="text-xs font-medium uppercase tracking-wider text-accent">
               {comp.result}
             </p>
             <h3 className="mt-2 text-xl font-semibold">{comp.title}</h3>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
@@ -9,6 +10,7 @@ export default function Home() {
     <>
       {/* hero */}
       <section className="flex flex-col items-center justify-center px-6 py-24 text-center sm:py-32">
+        <Image src="/logo.png" alt="ATC Logo" width={96} height={96} className="mb-6" />
         <p className="mb-4 text-sm font-medium uppercase tracking-widest text-zinc-500">
           Bonney Lake High School
         </p>
@@ -51,7 +53,7 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {competitions.slice(0, 3).map((comp) => (
             <Card key={comp.title}>
-              <p className="text-xs font-medium uppercase tracking-wider text-blue-400">
+              <p className="text-xs font-medium uppercase tracking-wider text-accent">
                 {comp.result}
               </p>
               <h3 className="mt-2 text-lg font-semibold">{comp.title}</h3>
