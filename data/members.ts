@@ -13,7 +13,7 @@ export const members: Member[] = [
   },
   {
     name: "Gavin Krawitz",
-    role: "Co-Founder",
+    role: "Vice President & Co-Founder",
     bio: "Co-founded ATC and helped establish the club's early direction. Graduating 2026.",
   },
 ];
