@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
@@ -11,16 +12,27 @@ export default function JoinPage() {
   return (
     <>
       <Section title="Join ATC" subtitle="No experience required. Just show up.">
-        <div className="max-w-2xl">
-          <p className="text-zinc-400 leading-relaxed">
-            ATC is the Algorithmic Thinking Club at Bonney Lake High School.
-            We build software, compete in programming competitions, and work on
-            projects together.
-          </p>
-          <p className="mt-4 text-zinc-400 leading-relaxed">
-            You don&apos;t need any coding experience to join. We&apos;ll help you
-            get started. If you already know how to code, even better.
-          </p>
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
+          <div className="max-w-2xl lg:flex-1">
+            <p className="text-zinc-400 leading-relaxed">
+              ATC is the Algorithmic Thinking Club at Bonney Lake High School.
+              We build software, compete in programming competitions, and work on
+              projects together.
+            </p>
+            <p className="mt-4 text-zinc-400 leading-relaxed">
+              You don&apos;t need any coding experience to join. We&apos;ll help you
+              get started. If you already know how to code, even better.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-lg lg:w-80 lg:shrink-0">
+            <Image
+              src="/club-booth.jpg"
+              alt="ATC booth at BLHS club fair"
+              width={590}
+              height={862}
+              className="w-full object-cover"
+            />
+          </div>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -67,7 +79,7 @@ export default function JoinPage() {
       <section className="border-t border-zinc-800 px-6 py-16 text-center">
         <h2 className="text-2xl font-bold">Ready?</h2>
         <p className="mx-auto mt-4 max-w-md text-zinc-400">
-          Fill out the form below and show up to a meeting. That&apos;s it.
+          Fill out the form below and show up to a meeting.
         </p>
         <div className="mt-6 flex gap-4 justify-center">
           <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>

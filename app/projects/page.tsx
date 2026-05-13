@@ -52,13 +52,6 @@ export default function ProjectsPage() {
           </Card>
         ))}
       </div>
-
-      <div className="mt-12 rounded-lg border border-dashed border-zinc-700 p-8 text-center">
-        <p className="text-zinc-500">
-          More projects coming soon. Have an idea?{" "}
-          <span className="text-zinc-300">Bring it to a meeting.</span>
-        </p>
-      </div>
     </Section>
   );
 }
