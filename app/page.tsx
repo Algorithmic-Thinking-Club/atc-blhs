@@ -11,7 +11,7 @@ export default function Home() {
       {/* hero */}
       <section className="relative flex flex-col items-center justify-center px-6 py-24 text-center sm:py-32 overflow-hidden">
         <Image
-          src="/skillsusa-stage.jpg"
+          src="/skillsusa-ceremony.jpg"
           alt=""
           fill
           className="object-cover opacity-15 pointer-events-none"
