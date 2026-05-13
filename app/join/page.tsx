@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function JoinPage() {
   return (
     <>
-      <Section title="Join ATC" subtitle="No experience required. Just show up.">
+      <Section title="Join ATC" subtitle="No experience required.">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
           <div className="max-w-2xl lg:flex-1">
             <p className="text-zinc-400 leading-relaxed">
@@ -23,6 +23,20 @@ export default function JoinPage() {
               You don&apos;t need any coding experience to join. We&apos;ll help you
               get started. If you already know how to code, even better.
             </p>
+            <div className="mt-8">
+              <h3 className="text-lg font-semibold">Ready?</h3>
+              <p className="mt-2 text-sm text-zinc-400">
+                Fill out the form and show up to a meeting.
+              </p>
+              <div className="mt-4 flex gap-4">
+                <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>
+                  Sign Up
+                </Button>
+                <Button href="/" variant="secondary">
+                  Back to Home
+                </Button>
+              </div>
+            </div>
           </div>
           <div className="overflow-hidden rounded-lg lg:w-80 lg:shrink-0">
             <Image
@@ -76,20 +90,6 @@ export default function JoinPage() {
         </div>
       </Section>
 
-      <section className="border-t border-zinc-800 px-6 py-16 text-center">
-        <h2 className="text-2xl font-bold">Ready?</h2>
-        <p className="mx-auto mt-4 max-w-md text-zinc-400">
-          Fill out the form below and show up to a meeting.
-        </p>
-        <div className="mt-6 flex gap-4 justify-center">
-          <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>
-            Sign Up
-          </Button>
-          <Button href="/" variant="secondary">
-            Back to Home
-          </Button>
-        </div>
-      </section>
     </>
   );
 }
