@@ -9,23 +9,32 @@ export default function Home() {
   return (
     <>
       {/* hero */}
-      <section className="flex flex-col items-center justify-center px-6 py-24 text-center sm:py-32">
-        <Image src="/logo.png" alt="ATC Logo" width={96} height={96} className="mb-6" />
-        <p className="mb-4 text-sm font-medium uppercase tracking-widest text-zinc-500">
-          Bonney Lake High School
-        </p>
-        <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl">
-          Algorithmic Thinking Club
-        </h1>
-        <p className="mt-6 max-w-xl text-lg text-zinc-400">
-          The CS club at BLHS. We build software, compete in programming
-          competitions, and work on real projects together.
-        </p>
-        <div className="mt-8 flex gap-4">
-          <Button href="/join">Join ATC</Button>
-          <Button href="/projects" variant="secondary">
-            See Our Work
-          </Button>
+      <section className="relative flex flex-col items-center justify-center px-6 py-24 text-center sm:py-32 overflow-hidden">
+        <Image
+          src="/skillsusa-stage.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-15 pointer-events-none"
+          priority
+        />
+        <div className="relative z-10 flex flex-col items-center">
+          <Image src="/logo.png" alt="ATC Logo" width={96} height={96} className="mb-6" />
+          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-zinc-500">
+            Bonney Lake High School
+          </p>
+          <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl">
+            Algorithmic Thinking Club
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-zinc-400">
+            The CS club at BLHS. We build software, compete in programming
+            competitions, and work on real projects together.
+          </p>
+          <div className="mt-8 flex gap-4">
+            <Button href="/join">Join ATC</Button>
+            <Button href="/projects" variant="secondary">
+              See Our Work
+            </Button>
+          </div>
         </div>
       </section>
 
