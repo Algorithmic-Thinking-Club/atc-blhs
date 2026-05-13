@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: "WiseGraph",
     status: "active",
     description:
-      "A data-visualization tool built for a BLHS student support specialist : David Wiseman. Tracks student progress across terms with 4 dashboard views, 3 chart types, and multi-term comparison. Used internally to support parent-facing discussions.",
+      "A data visualization tool built for a BLHS student support specialist : David Wiseman. Tracks student progress across terms with 4 dashboard views, 3 chart types, and multi-term comparison. Used internally to support parent-facing discussions.",
     tech: ["TypeScript", "React", "Recharts"],
   },
   {
