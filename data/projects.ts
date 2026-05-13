@@ -25,7 +25,7 @@ export const projects: Project[] = [
     title: "Adventure Game",
     status: "planned",
     description:
-      "A collaborative BLHS school-life game. Ashwath builds the core framework over summer 2026, and ATC members build individual modules and minigames during the school year as plugins. Meant to be a fun onboarding project for new students and a long-term club effort.",
+      "A collaborative BLHS school-life game. The core framework is built over summer 2026, and ATC members build individual modules and minigames during the school year as plugins. Meant to be a fun onboarding project for new students and a long-term club effort.",
     tech: ["TypeScript"],
   },
 ];
