@@ -11,41 +11,50 @@ export const metadata: Metadata = {
 export default function JoinPage() {
   return (
     <>
-      <div className="relative overflow-hidden rounded-xl mb-16">
-        <Image
-          src="/club-booth.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-25 pointer-events-none"
-        />
-        <div className="relative z-10 px-8 py-14 sm:px-12 sm:py-20">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Join ATC</h2>
-          <p className="mt-2 text-zinc-400">No experience required.</p>
-          <div className="mt-8 max-w-2xl">
-            <p className="text-zinc-300 leading-relaxed">
-              ATC is the Algorithmic Thinking Club at Bonney Lake High School.
-              We build software, compete in programming competitions, and work on
-              projects together.
-            </p>
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              You don&apos;t need any coding experience to join. We&apos;ll help you
-              get started. If you already know how to code, even better.
-            </p>
-          </div>
-          <div className="mt-8">
-            <h3 className="text-lg font-semibold">Ready?</h3>
-            <p className="mt-2 text-sm text-zinc-400">
-              Fill out the form and show up to a meeting.
-            </p>
-            <div className="mt-4 flex gap-4">
-              <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>
-                Sign Up
-              </Button>
-              <Button href="/" variant="secondary">
-                Back to Home
-              </Button>
+      <div className="relative flex flex-col lg:flex-row lg:min-h-[70vh]">
+        {/* text side */}
+        <div className="flex-1 px-6 py-16 sm:px-12 sm:py-20 lg:flex lg:items-center">
+          <div className="max-w-lg">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Join ATC</h2>
+            <p className="mt-2 text-zinc-400">No experience required.</p>
+            <div className="mt-8">
+              <p className="text-zinc-300 leading-relaxed">
+                ATC is the Algorithmic Thinking Club at Bonney Lake High School.
+                We build software, compete in programming competitions, and work on
+                projects together.
+              </p>
+              <p className="mt-4 text-zinc-400 leading-relaxed">
+                You don&apos;t need any coding experience to join. We&apos;ll help you
+                get started. If you already know how to code, even better.
+              </p>
+            </div>
+            <div className="mt-8">
+              <h3 className="text-lg font-semibold">Ready?</h3>
+              <p className="mt-2 text-sm text-zinc-400">
+                Fill out the form and show up to a meeting.
+              </p>
+              <div className="mt-4 flex gap-4">
+                <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>
+                  Sign Up
+                </Button>
+                <Button href="/" variant="secondary">
+                  Back to Home
+                </Button>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* image side */}
+        <div className="relative h-72 lg:h-auto lg:flex-1">
+          <Image
+            src="/club-booth.jpg"
+            alt="ATC booth at BLHS club fair"
+            fill
+            className="object-cover opacity-40 lg:opacity-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent hidden lg:block" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent lg:hidden" />
         </div>
       </div>
 
