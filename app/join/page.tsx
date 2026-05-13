@@ -67,9 +67,12 @@ export default function JoinPage() {
       <section className="border-t border-zinc-800 px-6 py-16 text-center">
         <h2 className="text-2xl font-bold">Ready?</h2>
         <p className="mx-auto mt-4 max-w-md text-zinc-400">
-          Show up to our next meeting or reach out to a current member. That&apos;s it.
+          Fill out the form below and show up to a meeting. That&apos;s it.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 flex gap-4 justify-center">
+          <Button href="https://docs.google.com/forms/d/1wPuw8keLqSHSA38l9J5ISKGpPCaf5OhQ2yovKxT9yYs" external>
+            Sign Up
+          </Button>
           <Button href="/" variant="secondary">
             Back to Home
           </Button>
