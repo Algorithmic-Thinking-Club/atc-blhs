@@ -13,6 +13,7 @@ export const members: Member[] = [
     name: "Ashwath Polali",
     role: "President & Founder",
     grade: "Sophomore",
+    hobby: "Instruments, robotics, composing music",
     bio: "Founded ATC in 2025 to build a real project-focused CS club at BLHS.",
   },
   {
