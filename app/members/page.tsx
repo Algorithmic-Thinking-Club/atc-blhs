@@ -24,9 +24,22 @@ export default function MembersPage() {
             </div>
             <h3 className="text-lg font-semibold">{member.name}</h3>
             <p className="text-sm text-accent">{member.role}</p>
+            {member.grade && (
+              <p className="mt-1 text-xs text-zinc-500">{member.grade}</p>
+            )}
             {member.bio && (
               <p className="mt-3 text-sm leading-relaxed text-zinc-400">
                 {member.bio}
+              </p>
+            )}
+            {member.hobby && (
+              <p className="mt-2 text-xs text-zinc-500">
+                <span className="text-zinc-400">Hobbies:</span> {member.hobby}
+              </p>
+            )}
+            {member.wants && (
+              <p className="mt-1 text-xs text-zinc-500">
+                <span className="text-zinc-400">Wants to build:</span> {member.wants}
               </p>
             )}
           </Card>
