@@ -5,13 +5,21 @@ import { createClient as createServiceClient } from "@supabase/supabase-js";
 const GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token";
 
 async function getAccessToken(): Promise<string> {
+  const clientId = process.env.GOOGLE_CLIENT_ID;
+  const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
+  const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
+
+  if (!clientId || !clientSecret || !refreshToken) {
+    throw new Error("Missing Google env vars (CLIENT_ID, CLIENT_SECRET, or REFRESH_TOKEN)");
+  }
+
   const res = await fetch(GOOGLE_TOKEN_URL, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({
-      client_id: process.env.GOOGLE_CLIENT_ID!,
-      client_secret: process.env.GOOGLE_CLIENT_SECRET!,
-      refresh_token: process.env.GOOGLE_REFRESH_TOKEN!,
+      client_id: clientId,
+      client_secret: clientSecret,
+      refresh_token: refreshToken,
       grant_type: "refresh_token",
     }),
   });
@@ -44,7 +52,10 @@ export async function POST() {
 
   try {
     const accessToken = await getAccessToken();
-    const courseId = process.env.GOOGLE_CLASSROOM_COURSE_ID!;
+    const courseId = process.env.GOOGLE_CLASSROOM_COURSE_ID;
+    if (!courseId) {
+      return NextResponse.json({ error: "Missing GOOGLE_CLASSROOM_COURSE_ID" }, { status: 500 });
+    }
 
     const res = await fetch(
       `https://classroom.googleapis.com/v1/courses/${courseId}/announcements?orderBy=updateTime+desc&pageSize=20`,
