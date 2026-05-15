@@ -3,12 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navLinks, siteConfig } from "@/data/site";
+import { createClient } from "@/lib/supabase/client";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [hubHref, setHubHref] = useState("/hub/login");
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setHubHref(user ? "/hub" : "/hub/login");
+    });
+  }, []);
 
   return (
     <nav className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
@@ -33,6 +42,16 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href={hubHref}
+            className={`text-sm transition-colors ${
+              pathname.startsWith("/hub")
+                ? "text-white"
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
+            Hub
+          </Link>
         </div>
 
         {/* mobile toggle */}
@@ -70,6 +89,17 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href={hubHref}
+            onClick={() => setOpen(false)}
+            className={`block py-2 text-sm transition-colors ${
+              pathname.startsWith("/hub")
+                ? "text-white"
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
+            Hub
+          </Link>
         </div>
       )}
     </nav>
